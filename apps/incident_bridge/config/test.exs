@@ -11,3 +11,5 @@ config :incident_bridge, IncidentBridge.Repo,
   database: "incident_bridge_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+  import_config "test.secret.exs"
