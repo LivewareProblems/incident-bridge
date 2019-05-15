@@ -1,3 +1,0 @@
-# IncidentComm
-
-**TODO: Add description**

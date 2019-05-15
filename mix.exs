@@ -1,4 +1,4 @@
-defmodule IncidentComm.Umbrella.MixProject do
+defmodule IncidentBridge.Umbrella.MixProject do
   use Mix.Project
 
   def project do
