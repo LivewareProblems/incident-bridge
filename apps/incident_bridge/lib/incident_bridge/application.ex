@@ -7,7 +7,8 @@ defmodule IncidentBridge.Application do
 
   def start(_type, _args) do
     children = [
-      IncidentBridge.Repo
+      IncidentBridge.Repo,
+      IncidentBridge.Slack.Bot
     ]
 
     Supervisor.start_link(children, strategy: :one_for_one, name: IncidentBridge.Supervisor)

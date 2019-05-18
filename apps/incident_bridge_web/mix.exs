@@ -45,7 +45,8 @@ defmodule IncidentBridgeWeb.MixProject do
       {:gettext, "~> 0.11"},
       {:incident_bridge, in_umbrella: true},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:observer_cli, "1.5.0"}
     ]
   end
 
