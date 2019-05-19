@@ -5,7 +5,10 @@ defmodule IncidentBridge.Config do
   alias Vapor.Provider.{File, Env}
 
   def start_link(_args \\ []) do
-    slack_bot_config_path = Application.app_dir(:incident_bridge, ["slack_bot_token.toml"])
+    slack_bot_config_path =
+      Application.app_dir(:incident_bridge, [
+        Application.get_env(:incident_bridge, :toml_file, "slack_bot_token.toml")
+      ])
 
     config =
       Config.default()

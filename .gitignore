@@ -28,7 +28,7 @@ gravitas-*.tar
 *.secret.exs
 dev.secret.exs
 test.secret.exs
-slack_bot_token.toml
+*.secret.toml
 
 # ignore local test directories
 /tmp/

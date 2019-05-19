@@ -4,7 +4,7 @@
 # the umbrella root.
 use Mix.Config
 
-config :incident_comm, IncidentComm.Repo,
+config :incident_bridge, IncidentBridge.Repo,
   username: "postgres",
   password: "postgres",
   database: "incident_comm_prod",
