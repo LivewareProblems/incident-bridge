@@ -16,7 +16,6 @@ defmodule IncidentBridge.Slack.Bot do
       Application.get_env(:incident_bridge, :slack_bot_oauth_token),
       %{name: __MODULE__}
     )
-    |> IO.inspect()
   end
 
   def handle_info({:message, text}, slack, state) do
