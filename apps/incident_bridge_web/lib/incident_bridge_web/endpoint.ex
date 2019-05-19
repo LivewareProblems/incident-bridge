@@ -55,7 +55,7 @@ defmodule IncidentBridgeWeb.Endpoint do
       {
         :ok,
         config
-        |> put_in([:http, :inet6, :port], port)
+        |> put_in([:http, :port], port)
         |> put_in([:secret_key_base], secret_key_base)
         |> put_in([:url, :host], "incidentbridge.com")
         |> put_in([:url, :port], 443)
