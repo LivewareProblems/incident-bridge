@@ -35,6 +35,10 @@
   "slack": {:hex, :slack, "0.19.0", "900fa5f7a22cd1b736c29beed63eb445d7e637ce23c844890c8964e431a02b51", [:mix], [{:httpoison, "~> 1.2", [hex: :httpoison, repo: "hexpm", optional: false]}, {:poison, "~> 3.0", [hex: :poison, repo: "hexpm", optional: false]}, {:websocket_client, "~> 1.2.4", [hex: :websocket_client, repo: "hexpm", optional: false]}], "hexpm"},
   "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.4", "f0eafff810d2041e93f915ef59899c923f4568f4585904d010387ed74988e77b", [:make, :mix, :rebar3], [], "hexpm"},
   "telemetry": {:hex, :telemetry, "0.4.0", "8339bee3fa8b91cb84d14c2935f8ecf399ccd87301ad6da6b71c09553834b2ab", [:rebar3], [], "hexpm"},
+  "toml": {:hex, :toml, "0.5.2", "e471388a8726d1ce51a6b32f864b8228a1eb8edc907a0edf2bb50eab9321b526", [:mix], [], "hexpm"},
   "unicode_util_compat": {:hex, :unicode_util_compat, "0.4.1", "d869e4c68901dd9531385bb0c8c40444ebf624e60b6962d95952775cac5e90cd", [:rebar3], [], "hexpm"},
+  "vapor": {:hex, :vapor, "0.2.0", "1a951f500ea519390dc69893e8031ad88b09e632e3e376f23325fa38800294f2", [:mix], [{:jason, "~> 1.1", [hex: :jason, repo: "hexpm", optional: false]}, {:toml, "~> 0.3", [hex: :toml, repo: "hexpm", optional: false]}, {:yaml_elixir, "~> 2.1", [hex: :yaml_elixir, repo: "hexpm", optional: false]}], "hexpm"},
   "websocket_client": {:hex, :websocket_client, "1.2.4", "14ec1ca4b6d247b44ccd9a80af8f6ca98328070f6c1d52a5cb00bc9d939d63b8", [:rebar3], [], "hexpm"},
+  "yamerl": {:hex, :yamerl, "0.7.0", "e51dba652dce74c20a88294130b48051ebbbb0be7d76f22de064f0f3ccf0aaf5", [:rebar3], [], "hexpm"},
+  "yaml_elixir": {:hex, :yaml_elixir, "2.3.0", "3629761bdb574144fd54726c4d090c67a1117559b6a59dc9323ff366c1b1ff4b", [:mix], [{:yamerl, "~> 0.7", [hex: :yamerl, repo: "hexpm", optional: false]}], "hexpm"},
 }

@@ -13,7 +13,7 @@ defmodule IncidentBridge.Slack.Bot do
     Slack.Bot.start_link(
       __MODULE__,
       %{},
-      Application.get_env(:incident_bridge, :slack_bot_oauth_token),
+      IncidentBridge.Config.get!(["slack_bot_token"], as: :string),
       %{name: __MODULE__}
     )
   end

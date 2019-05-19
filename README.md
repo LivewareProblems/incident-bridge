@@ -20,10 +20,6 @@ config :incident_bridge, IncidentBridge.Repo,
   database: "incident_bridge_dev",
   hostname: "localhost",
   pool_size: 10
-
-config :incident_bridge,
-  slack_bot_oauth_token: "your_bot_token",
-  slack_oauth_token: "your_oauth_web_token"
 ```
 
 `/apps/incident_bridge/test.secret.exs`
@@ -38,13 +34,15 @@ config :incident_bridge, IncidentBridge.Repo,
   database: "incident_bridge_dev",
   hostname: "localhost",
   pool_size: 10
-
-config :incident_bridge,
-  slack_bot_oauth_token: "your_bot_token",
-  slack_oauth_token: "your_oauth_web_token"
 ```
 
-`/apps/incident_bridge/prod.secret.exs`
+`/apps/incident_bridge/slack_bot_token.toml`
+
+```TOML
+slack_bot_token = "your_bot_token"
+slack_oauth_token = "your_oauth_token"
+
+```
 
 ```elixir
 use Mix.Config
@@ -56,10 +54,6 @@ config :incident_bridge, IncidentBridge.Repo,
   database: "incident_bridge_dev",
   hostname: "localhost",
   pool_size: 10
-
-config :incident_bridge,
-  slack_bot_oauth_token: "your_bot_token",
-  slack_oauth_token: "your_oauth_web_token"
 ```
 
 You can then generate the db

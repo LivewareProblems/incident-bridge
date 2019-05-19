@@ -39,7 +39,9 @@ defmodule IncidentBridge.MixProject do
       {:ecto_sql, "~> 3.0"},
       {:postgrex, ">= 0.0.0"},
       {:jason, "~> 1.0"},
-      {:slack, "~> 0.19.0"}
+      {:slack, "~> 0.19.0"},
+      {:vapor, "~> 0.2.0"},
+      {:poison, "~> 3.1"}
     ]
   end
 
