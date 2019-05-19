@@ -6,9 +6,10 @@ defmodule IncidentBridge.Config do
 
   def start_link(_args \\ []) do
     slack_bot_config_path =
-      Application.app_dir(:incident_bridge, [
-        Application.get_env(:incident_bridge, :toml_file, "slack_bot_token.toml")
-      ])
+      Application.app_dir(
+        :incident_bridge,
+        Application.get_env(:incident_bridge, :toml_file, ["priv", "slack_bot_token.toml"])
+      )
 
     config =
       Config.default()
