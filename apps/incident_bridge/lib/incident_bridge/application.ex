@@ -7,6 +7,7 @@ defmodule IncidentBridge.Application do
 
   def start(_type, _args) do
     children = [
+      IncidentBridge.Config,
       IncidentBridge.Repo,
       IncidentBridge.Slack.Bot
     ]
