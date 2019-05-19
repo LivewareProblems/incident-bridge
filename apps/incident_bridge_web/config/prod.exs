@@ -14,9 +14,12 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :incident_bridge_web, IncidentBridgeWeb.Endpoint,
-  http: [:inet6, port: System.get_env("PORT") || 4000],
+  http: [:inet6, port: 4000],
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  load_from_system_env: true,
+  secret_key_base: "a_none_secret_keybase",
+  server: true
 
 # ## SSL Support
 #
@@ -66,7 +69,3 @@ config :incident_bridge_web, IncidentBridgeWeb.Endpoint,
 #
 # Note you can't rely on `System.get_env/1` when using releases.
 # See the releases documentation accordingly.
-
-# Finally import the config/prod.secret.exs which should be versioned
-# separately.
-import_config "prod.secret.exs"

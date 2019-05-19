@@ -4,4 +4,10 @@
 # the umbrella root.
 use Mix.Config
 
-import_config "prod.secret.exs"
+config :incident_comm, IncidentComm.Repo,
+  username: "postgres",
+  password: "postgres",
+  database: "incident_comm_prod",
+  pool_size: 2,
+  ssl: true,
+  load_from_system_env: true

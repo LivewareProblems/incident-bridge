@@ -1,0 +1,9 @@
+cd $assets_dir
+yarn deploy
+
+cd $phoenix_dir
+mix "${phoenix_ex}.digest"
+
+if mix help "${phoenix_ex}.digest.clean" 1>/dev/null 2>&1; then
+  mix "${phoenix_ex}.digest.clean"
+fi

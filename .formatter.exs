@@ -1,6 +1,6 @@
 [
   inputs: ["mix.exs", "{config,lib,test}/**/*.{ex,exs}"],
-  import_deps: [:phoenix, :ecto]
+  import_deps: [:phoenix, :ecto],
   locals_without_parens: [
     # Kernel
     inspect: 1,

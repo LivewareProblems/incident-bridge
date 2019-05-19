@@ -43,4 +43,25 @@ defmodule IncidentBridgeWeb.Endpoint do
     signing_salt: "uh4Dx/ax"
 
   plug IncidentBridgeWeb.Router
+
+  def init(_key, config) do
+    if config[:load_from_system_env] do
+      port = System.get_env("PORT") || raise "expected the PORT environment variable to be set"
+
+      secret_key_base =
+        System.get_env("SECRET_KEY_BASE") ||
+          raise "expected the SECRET_KEY_BASE environment variable to be set"
+
+      {
+        :ok,
+        config
+        |> put_in([:http, :inet6, :port], port)
+        |> put_in([:secret_key_base], secret_key_base)
+        |> put_in([:url, :host], "incidentbridge.com")
+        |> put_in([:url, :port], 443)
+      }
+    else
+      {:ok, config}
+    end
+  end
 end
