@@ -24,5 +24,6 @@ defmodule IncidentBridgeWeb.Router do
     pipe_through :api
 
     post "/incidentbridge/slack/events", SlackEventsController, :index
+    post "/incidentbridge/slack/command", SlackCommandController, :index
   end
 end

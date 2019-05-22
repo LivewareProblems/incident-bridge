@@ -1,6 +1,10 @@
 defmodule IncidentBridge.Slack.Bot do
   use Slack
 
+  def announce_creating_incident(incident_name, channel_name) do
+    send(__MODULE__, {:incident_created, channel_name, incident_name})
+  end
+
   def child_spec(init_arg) do
     %{
       id: __MODULE__,
@@ -20,6 +24,18 @@ defmodule IncidentBridge.Slack.Bot do
 
   def handle_info({:message, text}, slack, state) do
     send_message(text, "#bot-integration", slack)
+
+    {:ok, state}
+  end
+
+  def handle_info({:incident_created, channel_name, incident_name}, slack, state) do
+    message = """
+    A new incident was raised titled #{incident_name}
+
+    Head over to ##{channel_name} to participate in it!
+    """
+
+    send_message(message, "#bot-integration", slack)
 
     {:ok, state}
   end
