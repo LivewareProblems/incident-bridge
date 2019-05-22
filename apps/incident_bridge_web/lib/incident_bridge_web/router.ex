@@ -20,7 +20,9 @@ defmodule IncidentBridgeWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", IncidentBridgeWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", IncidentBridgeWeb do
+    pipe_through :api
+
+    post "/incidentbridge/slack/events", SlackEventsController, :index
+  end
 end
