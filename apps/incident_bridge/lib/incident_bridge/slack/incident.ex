@@ -5,7 +5,7 @@ defmodule IncidentBridge.Slack.Incident do
       |> NaiveDateTime.to_iso8601(:basic)
 
     Slack.Web.Channels.create(channel_name, %{
-      token: IncidentBridge.Config.get!(["slack_bot_token"], as: :string)
+      token: IncidentBridge.Config.get!(["slack_oauth_token"], as: :string)
     })
 
     IncidentBridge.Slack.Bot.announce_creating_incident(incident_name, channel_name)
